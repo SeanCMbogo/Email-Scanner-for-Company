@@ -103,7 +103,7 @@ def email_unreachable(filename, unreachables):
 # in the Unreachables section 
 def email_send(filename, unreachables):
 	with open("customer_zaius_%s" % filename, 'rU') as email_list, open(unreachables, 'rU') as unreachables_list, \
-	open(('EMAILS_IN_ZAIUS_%s') % filename, 'w+') as output: 
+	open(('SENT_EMAILS_%s') % filename, 'w+') as output: 
 		writer = csv.writer(output, delimiter=',')
 		readCSV1 = email_list.readlines()
 		readCSV2 = unreachables_list.readlines()
